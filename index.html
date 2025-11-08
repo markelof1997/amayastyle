@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Добро пожаловать</title>
+<title>Истории и вдохновение</title>
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
 
@@ -11,85 +11,93 @@
     font-family:'Inter', sans-serif;
     background: #ffffff;
     color:#111;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    min-height:100vh;
-    text-align:center;
+    line-height:1.6;
     padding:20px;
   }
 
-  h1 {
+  header {
+    text-align:center;
+    margin-bottom:40px;
+  }
+
+  header h1 {
     font-size:32px;
     margin-bottom:16px;
-    animation: fadeIn 1s ease forwards;
   }
 
-  p {
+  header p {
     font-size:18px;
-    margin-bottom:40px;
     color:#555;
-    animation: fadeIn 1.2s ease forwards;
   }
 
-  button {
-    background:#0a84ff;
-    color:#fff;
-    border:none;
+  section {
+    max-width:700px;
+    margin:0 auto 40px auto;
+  }
+
+  section img {
+    width:100%;
     border-radius:12px;
-    padding:16px 36px;
-    font-size:20px;
-    font-weight:600;
-    cursor:pointer;
-    transition: transform 0.2s ease, background 0.2s ease;
-    animation: pulse 2s infinite;
+    margin-bottom:20px;
   }
 
-  button:hover {
-    background:#0066cc;
-    transform: scale(1.05);
+  section h2 {
+    font-size:24px;
+    margin-bottom:12px;
   }
 
-  .hint {
-    margin-top:24px;
+  section p {
+    font-size:16px;
+    color:#444;
+  }
+
+  .story {
+    margin-bottom:60px;
+  }
+
+  footer {
+    text-align:center;
     font-size:14px;
     color:#888;
-    animation: fadeIn 1.5s ease forwards;
-  }
-
-  @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-  }
-
-  @keyframes fadeIn {
-    from { opacity:0; transform: translateY(20px);}
-    to { opacity:1; transform: translateY(0);}
+    margin-top:40px;
   }
 
   @media (max-width:768px) {
-    h1 { font-size:28px; }
-    p { font-size:16px; margin-bottom:32px; }
-    button { font-size:18px; padding:14px 28px; }
+    header h1 { font-size:28px; }
+    header p { font-size:16px; }
+    section h2 { font-size:20px; }
+    section p { font-size:14px; }
   }
 </style>
 </head>
 <body>
 
-<h1>Добро пожаловать!</h1>
-<p>Нажмите кнопку, чтобы продолжить</p>
+<header>
+  <h1>Добро пожаловать в мир историй</h1>
+  <p>Здесь вы найдёте вдохновение и интересные истории из жизни людей.</p>
+</header>
 
-<button id="ctaButton">Продолжить</button>
+<section class="story">
+  <img src="https://picsum.photos/700/400?random=1" alt="История 1">
+  <h2>История о путешествии</h2>
+  <p>Однажды человек отправился в далёкую страну, чтобы найти новые впечатления и открыть для себя неизвестное. Каждое мгновение его путешествия было наполнено открытиями и эмоциями.</p>
+</section>
 
-<div class="hint">Эта страница безопасна и нейтральна</div>
+<section class="story">
+  <img src="https://picsum.photos/700/400?random=2" alt="История 2">
+  <h2>История о дружбе</h2>
+  <p>Друзья нашли друг друга в самых неожиданных местах. Они вместе преодолевали трудности и радовались успехам, поддерживая друг друга во всем.</p>
+</section>
 
-<script>
-  document.getElementById("ctaButton").addEventListener("click", () => {
-    window.location.href = "https://example.com";
-  });
-</script>
+<section class="story">
+  <img src="https://picsum.photos/700/400?random=3" alt="История 3">
+  <h2>История о мечтах</h2>
+  <p>Мечты делают нас сильнее. Эта история рассказывает о том, как человек с упорством и терпением шёл к своей цели, преодолевая все препятствия на пути.</p>
+</section>
+
+<footer>
+  &copy; 2025 Истории и вдохновение. Все права защищены.
+</footer>
 
 </body>
 </html>
